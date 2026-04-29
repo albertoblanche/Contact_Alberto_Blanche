@@ -7,6 +7,10 @@
   <title>Alberto Blanche — Investment Analyst</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
   <style>
+    /* Fallback si Google Fonts no carga */
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap');
+  </style>
+  <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 ```
@@ -21,10 +25,11 @@
 }
 
 html, body {
-  min-height: 100%;
-  background: var(--black);
+  min-height: 100vh;
+  background: #0a0a0a !important;
+  background-color: #0a0a0a !important;
   color: var(--white);
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Mono', 'Courier New', monospace;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,7 +110,7 @@ body::before {
 }
 
 .name {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 300;
   font-size: 46px;
   line-height: 1.0;
@@ -116,7 +121,7 @@ body::before {
 }
 
 .title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-style: italic;
   font-weight: 300;
   font-size: 16px;
@@ -247,7 +252,7 @@ body::before {
       <span class="btn-arrow">→</span>
     </a>
 
-    <a class="contact-btn" href="https://mail.google.com/mail/?view=cm&to=alberto@tantauco.vc" target="_blank" rel="noopener">
+    <a class="contact-btn" href="googlegmail://co?to=alberto@tantauco.vc" onclick="this.href=(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)?'googlegmail://co?to=alberto@tantauco.vc':'https://mail.google.com/mail/?view=cm&to=alberto@tantauco.vc')" target="_blank" rel="noopener">
       <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
         <rect x="2" y="4" width="20" height="16" rx="2"/>
         <path d="m2 7 10 7 10-7"/>
